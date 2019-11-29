@@ -1,0 +1,4 @@
+_dev/node_modules
+_dev/node_modules/*
+assets/img
+assets/img/*
