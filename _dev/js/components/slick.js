@@ -31,16 +31,68 @@ $(window).ready(function () {
 
     // append all slider pages and title to create nav slider
     $('.slick-slides .slick-track').children('.slick-slide').each(function () {
-        var title = $(this).find('.h2').html();
+        if ($(this).find('.h2 span').hasClass('smaller')) {
+            if ($(this).find('.h2').hasClass('seq')) {
+                var title = "SEQ - " + $(this).find('.h2 .smaller').html();
+            } else {
+                var title = "CU - " + $(this).find('.h2 .smaller').html();
+            }
+
+        } else {
+            var title = $(this).find('.h2').html();
+        }
         $('.slider-nav').append('<div class="slide-nav"><p>' + title + '</p></div>')
     });
 
     //  initialize nav slider
-    $('.slider-nav').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        asNavFor: '.slick-slides',
-        centerMode: true,
-        focusOnSelect: true
+    // $('.slider-nav').slick({
+    //     slidesToShow: 4,
+    //     slidesToScroll: 1,
+    //     asNavFor: '.slick-slides',
+    //     centerMode: true,
+    //     focusOnSelect: true,
+    //     vertical: true,
+    //     verticalSwiping: true
+    // });
+
+    $("#startSlider").click(function (e) {
+        e.preventDefault();
+        $('.slick-slides').slick('slickGoTo', 1);
     });
+
+    // mouse scroll
+    const $slider = $(".slider-nav");
+    $slider
+        .on('init', () => {
+            mouseWheel($slider)
+        })
+        .slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            asNavFor: '.slick-slides',
+            centerMode: true,
+            focusOnSelect: true,
+            vertical: true,
+            verticalSwiping: true
+        })
+
+    function mouseWheel($slider) {
+        $(window).on('wheel', {
+            $slider: $slider
+        }, mouseWheelHandler)
+    }
+
+    function mouseWheelHandler(event) {
+        event.preventDefault()
+        const $slider = event.data.$slider
+        const delta = event.originalEvent.deltaY
+
+        if ($(".slider-nav:hover").length != 0) {
+            if (delta > 0) {
+                $slider.slick('slickNext')
+            } else {
+                $slider.slick('slickPrev')
+            }
+        }
+    }
 })
