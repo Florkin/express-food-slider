@@ -77,16 +77,16 @@ input[type="reset"] {
 
         .slick-slide {
             transition-duration: 0.3s;
-            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
-            margin: 11px;
+            // box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+            // margin: 11px;
             border:2px solid transparent;
 
             &.slick-active {
-                box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.3);
+                // box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.3);
             }
 
             &.slick-current {
-                box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+                // box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
                 border:2px solid $primary;
             }
         }
@@ -99,7 +99,7 @@ input[type="reset"] {
 
             p {
                 margin-bottom: 0;
-                padding: 10px;
+                padding: 5px;
                 font-weight: 700;
             }
         }

@@ -44,17 +44,6 @@ $(window).ready(function () {
         $('.slider-nav').append('<div class="slide-nav"><p>' + title + '</p></div>')
     });
 
-    //  initialize nav slider
-    // $('.slider-nav').slick({
-    //     slidesToShow: 4,
-    //     slidesToScroll: 1,
-    //     asNavFor: '.slick-slides',
-    //     centerMode: true,
-    //     focusOnSelect: true,
-    //     vertical: true,
-    //     verticalSwiping: true
-    // });
-
     $("#startSlider").click(function (e) {
         e.preventDefault();
         $('.slick-slides').slick('slickGoTo', 1);
