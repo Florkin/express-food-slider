@@ -144,6 +144,9 @@ input[type="reset"] {
     max-height:85%;
     position: relative;
     top:-40px;
+    &.database-img{
+        max-height:105%;
+    }
 }
 
 .smaller{
