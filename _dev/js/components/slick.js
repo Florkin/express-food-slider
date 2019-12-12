@@ -23,13 +23,13 @@ export default class SlickSlider {
 
 $(window).ready(function () {
     $('.slick-slides').on('beforeChange', function(){
-        $('.slider-nav-container').css('opacity', 1);
+        $('.slider-nav-container, .slick-arrow i').css('opacity', 1);
     })
     // initialize big slider
     $('.slick-slides').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: false,
+        arrows: true,
         fade: true,
         asNavFor: '.slider-nav'
     });
