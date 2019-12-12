@@ -19,7 +19,12 @@ export default class SlickSlider {
 
 }
 
+
+
 $(window).ready(function () {
+    $('.slick-slides').on('beforeChange', function(){
+        $('.slider-nav-container').css('opacity', 1);
+    })
     // initialize big slider
     $('.slick-slides').slick({
         slidesToShow: 1,
@@ -73,7 +78,7 @@ $(window).ready(function () {
     }
 
     function mouseWheelHandler(event) {
-        event.preventDefault()
+        // event.preventDefault()
         const $slider = event.data.$slider
         const delta = event.originalEvent.deltaY
 
@@ -88,8 +93,10 @@ $(window).ready(function () {
 })
 
 
-$('#startSlider').on('click', function(){
-    $('.slider-nav-container').css('opacity', 1);
-})
+// $('#startSlider').on('click', function(){
+//     $('.slider-nav-container').css('opacity', 1);
+// })
+
+
 
 

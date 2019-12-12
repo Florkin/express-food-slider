@@ -1,6 +1,7 @@
 @import "bootstrap";
 @import "./components/slick.scss";
 @import "./components/slick-theme.scss";
+@import "./components/slick-sliders.scss";
 
 button,
 input[type="submit"],
@@ -40,106 +41,15 @@ input[type="reset"] {
     font-weight: 700;
 }
 
-.slick-slides {
-    .slick-slide {
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+.smaller{
+    font-size:24px;
 }
-
-.slick-arrow {
-    i {
-        font-size: 50px;
-        background: none;
-    }
-}
-
-.slider-nav-container {
-    position: absolute;
-    left: 5%;
-    width: 15%;
-    margin: auto;
-    bottom: 5%;
-    opacity: 0;
-    transition-duration: 0.3s;
-
-    .slider-nav {
-        .slick-track {
-            padding: 20px 0;
-        }
-
-        .slick-prev {
-            left: -50px;
-        }
-
-        .slick-next {
-            right: -50px;
-        }
-
-        .slick-slide {
-            transition-duration: 0.3s;
-            // box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
-            // margin: 11px;
-            border:2px solid transparent;
-            cursor:pointer;
-
-            // &.slick-active {
-            //     box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.3);
-            // }
-
-            &.slick-current {
-                box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-                border:2px solid $primary;
-            }
-        }
-
-        .slide-nav {
-            display: flex !important;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-
-            p {
-                margin-bottom: 0;
-                // padding: 5px;
-                font-weight: 700;
-            }
-        }
-    }
-}
-
 
 .wrapper {
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 1)),
         url("./../img/background.jpg");
 }
 
-.slide-title {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-
-    .cta-container {
-        padding: 0 25%;
-    }
-}
-
-.actor {
-    padding: 20px 0;
-
-    .material-icons {
-        font-size: 50px;
-        position: relative;
-        top: 10px;
-    }
-
-    span {
-        font-size: 30px;
-    }
-}
 
 .img-wrapper{
     display:flex;
@@ -154,10 +64,6 @@ input[type="reset"] {
     &.database-img{
         max-height:105%;
     }
-}
-
-.smaller{
-    font-size:24px;
 }
 
 .display-4 {
