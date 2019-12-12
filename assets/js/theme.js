@@ -106,7 +106,7 @@ function(e,t,i){"use strict";function o(e,t){if(!(e instanceof t))throw new Type
 // append all slider pages and title to create nav slider
 (0,r.default)(".slick-slides .slick-track").children(".slick-slide").each(function(){if((0,r.default)(this).find(".h2 span").hasClass("smaller"))if((0,r.default)(this).find(".h2").hasClass("seq"))var e="SEQ - "+(0,r.default)(this).find(".h2 .smaller").html();else var e="CU - "+(0,r.default)(this).find(".h2 .smaller").html();else var e=(0,r.default)(this).find(".h2").html();(0,r.default)(".slider-nav").append('<div class="slide-nav"><p>'+e+"</p></div>")}),(0,r.default)("#startSlider").click(function(e){e.preventDefault(),(0,r.default)(".slick-slides").slick("slickGoTo",1)});
 // mouse scroll
-var i=(0,r.default)(".slider-nav");i.on("init",function(){e(i)}).slick({slidesToShow:18,slidesToScroll:1,asNavFor:".slick-slides",infinite:!1,centerMode:!1,focusOnSelect:!0,vertical:!0,verticalSwiping:!0})}),e.exports=t.default},/* 3 */
+var i=(0,r.default)(".slider-nav");i.on("init",function(){e(i)}).slick({slidesToShow:18,slidesToScroll:1,asNavFor:".slick-slides",infinite:!1,centerMode:!1,focusOnSelect:!0,vertical:!0,verticalSwiping:!0})}),(0,r.default)("#startSlider").on("click",function(){(0,r.default)(".slider-nav-container").css("opacity",1)}),e.exports=t.default},/* 3 */
 /***/
 function(e,t,i){"use strict";function o(e){return e&&e.__esModule?e:{default:e}}function n(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}/**
  * --------------------------------------------------------------------------

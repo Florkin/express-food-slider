@@ -62,6 +62,8 @@ input[type="reset"] {
     width: 15%;
     margin: auto;
     bottom: 5%;
+    opacity: 0;
+    transition-duration: 0.3s;
 
     .slider-nav {
         .slick-track {
@@ -83,12 +85,12 @@ input[type="reset"] {
             border:2px solid transparent;
             cursor:pointer;
 
-            &.slick-active {
-                // box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.3);
-            }
+            // &.slick-active {
+            //     box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.3);
+            // }
 
             &.slick-current {
-                // box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+                box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
                 border:2px solid $primary;
             }
         }

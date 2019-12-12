@@ -86,3 +86,10 @@ $(window).ready(function () {
         }
     }
 })
+
+
+$('#startSlider').on('click', function(){
+    $('.slider-nav-container').css('opacity', 1);
+})
+
+
