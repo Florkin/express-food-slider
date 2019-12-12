@@ -56,10 +56,11 @@ $(window).ready(function () {
             mouseWheel($slider)
         })
         .slick({
-            slidesToShow: 4,
+            slidesToShow: 18,
             slidesToScroll: 1,
             asNavFor: '.slick-slides',
-            centerMode: true,
+            infinite: false,
+            centerMode: false,
             focusOnSelect: true,
             vertical: true,
             verticalSwiping: true

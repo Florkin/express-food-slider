@@ -25,14 +25,15 @@ input[type="reset"] {
 
 .section-title{
     position: relative;
-    top:-100px;
+    top:-240px;
     padding-bottom: 30px;
+    margin-left:25px;
     max-width: 90%;
     border-bottom:1px solid $primary;
 }
 
 .container-fluid {
-    width: 95%;
+    width: 100%;
 }
 
 .bold {
@@ -80,6 +81,7 @@ input[type="reset"] {
             // box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
             // margin: 11px;
             border:2px solid transparent;
+            cursor:pointer;
 
             &.slick-active {
                 // box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.3);
@@ -99,7 +101,7 @@ input[type="reset"] {
 
             p {
                 margin-bottom: 0;
-                padding: 5px;
+                // padding: 5px;
                 font-weight: 700;
             }
         }
