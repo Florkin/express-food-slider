@@ -35,7 +35,7 @@ $(window).ready(function () {
     });
 
     // append all slider pages and title to create nav slider
-    $('.slick-slides .slick-track').children('.slick-slide').each(function () {
+    $('.slick-slides .slick-track').children('.slick-slide').each(function () {        
         if ($(this).find('.h2 span').hasClass('smaller')) {
             if ($(this).find('.h2').hasClass('seq')) {
                 var title = "SEQ - " + $(this).find('.h2 .smaller').html();
@@ -46,7 +46,7 @@ $(window).ready(function () {
         } else {
             var title = $(this).find('.h2').html();
         }
-        $('.slider-nav').append('<div class="slide-nav"><p>' + title + '</p></div>')
+        $('.slider-nav').append('<div class="slide-nav"><p>' + title + '</p></div>');
     });
 
     $("#startSlider").click(function (e) {
