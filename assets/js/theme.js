@@ -104,9 +104,9 @@ function(e,t,i){"use strict";function o(e,t){if(!(e instanceof t))throw new Type
 // event.preventDefault()
 var t=e.data.$slider,i=e.originalEvent.deltaY;0!=(0,r.default)(".slider-nav:hover").length&&(i>0?t.slick("slickNext"):t.slick("slickPrev"))}(0,r.default)(".slick-slides").on("beforeChange",function(){(0,r.default)(".slider-nav-container, .slick-arrow i").css("opacity",1)}),
 // initialize big slider
-(0,r.default)(".slick-slides").slick({slidesToShow:1,slidesToScroll:1,arrows:!0,fade:!0,asNavFor:".slider-nav"}),
+(0,r.default)(".slick-slides").slick({slidesToShow:1,slidesToScroll:1,arrows:!1,fade:!0,asNavFor:".slider-nav"}),
 // append all slider pages and title to create nav slider
-(0,r.default)(".slick-slides .slick-track").children(".slick-slide").each(function(){if((0,r.default)(this).find(".h2 span").hasClass("smaller"))if((0,r.default)(this).find(".h2").hasClass("seq"))var e="SEQ - "+(0,r.default)(this).find(".h2 .smaller").html();else var e="CU - "+(0,r.default)(this).find(".h2 .smaller").html();else var e=(0,r.default)(this).find(".h2").html();(0,r.default)(".slider-nav").append('<div class="slide-nav"><p>'+e+"</p></div>")}),(0,r.default)("#startSlider").click(function(e){e.preventDefault(),(0,r.default)(".slick-slides").slick("slickGoTo",1)});
+(0,r.default)(".slick-slides .slick-track").children(".slick-slide").each(function(){if((0,r.default)(this).find(".h2 span").hasClass("smaller"))if((0,r.default)(this).find(".h2").hasClass("seq"))var e="SEQ - "+(0,r.default)(this).find(".h2 .smaller").html();else if((0,r.default)(this).find(".h2").hasClass("cu"))var e="CU - "+(0,r.default)(this).find(".h2 .smaller").html();else var e="DA - "+(0,r.default)(this).find(".h2 .smaller").html();else var e=(0,r.default)(this).find(".h2").html();(0,r.default)(".slider-nav").append('<div class="slide-nav"><p>'+e+"</p></div>")}),(0,r.default)("#startSlider").click(function(e){e.preventDefault(),(0,r.default)(".slick-slides").slick("slickGoTo",1)});
 // mouse scroll
 var i=(0,r.default)(".slider-nav");i.on("init",function(){e(i)}).slick({slidesToShow:18,slidesToScroll:1,asNavFor:".slick-slides",infinite:!1,centerMode:!1,focusOnSelect:!0,vertical:!0,verticalSwiping:!0})}),
 // $('#startSlider').on('click', function(){

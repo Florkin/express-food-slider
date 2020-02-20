@@ -22,25 +22,27 @@ export default class SlickSlider {
 
 
 $(window).ready(function () {
-    $('.slick-slides').on('beforeChange', function(){
+    $('.slick-slides').on('beforeChange', function () {
         $('.slider-nav-container, .slick-arrow i').css('opacity', 1);
     })
     // initialize big slider
     $('.slick-slides').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: true,
+        arrows: false,
         fade: true,
         asNavFor: '.slider-nav'
     });
 
     // append all slider pages and title to create nav slider
-    $('.slick-slides .slick-track').children('.slick-slide').each(function () {        
+    $('.slick-slides .slick-track').children('.slick-slide').each(function () {
         if ($(this).find('.h2 span').hasClass('smaller')) {
             if ($(this).find('.h2').hasClass('seq')) {
                 var title = "SEQ - " + $(this).find('.h2 .smaller').html();
-            } else {
+            } else if ($(this).find('.h2').hasClass('cu')) {
                 var title = "CU - " + $(this).find('.h2 .smaller').html();
+            } else {
+                var title = "DA - " + $(this).find('.h2 .smaller').html();
             }
 
         } else {
@@ -96,7 +98,3 @@ $(window).ready(function () {
 // $('#startSlider').on('click', function(){
 //     $('.slider-nav-container').css('opacity', 1);
 // })
-
-
-
-
