@@ -63,7 +63,7 @@ $(window).ready(function () {
             mouseWheel($slider)
         })
         .slick({
-            slidesToShow: 18,
+            slidesToShow: 20,
             slidesToScroll: 1,
             asNavFor: '.slick-slides',
             infinite: false,
